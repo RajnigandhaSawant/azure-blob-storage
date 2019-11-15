@@ -1,0 +1,19 @@
+<div >
+
+    <form enctype="multipart/form-data" >
+        <label >File :</label>
+        <input type="file" id="image" name="image" multiple/>
+        <button type="button" name="btn" (click)="save()">Upload</button>
+        <div>
+            <p *ngFor="let msg of messages">{{msg}}</p>
+        </div>
+    </form>
+</div>
+<div>
+    <table border="1">
+        <tr *ngFor="let blob of blobs">
+            <td>{{blob.Name}}</td>
+            <td>{{blob.Url}}</td>
+        </tr>
+    </table>
+</div>
